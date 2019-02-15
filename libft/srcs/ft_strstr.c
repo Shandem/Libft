@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 12:02:09 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/15 12:02:22 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/15 12:15:02 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/15 12:19:47 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned char	*out;
+	unsigned int pos;
+	unsigned int i;
 
-	out = (unsigned char*)str;
-	while (n--)
-		if (*out == (unsigned char)c)
-			return (out);
-		else
-			out++;
-	return (NULL);
+	if (!to_find)
+		return (str);
+	pos = 0;
+	while (str[pos] != '\0')
+	{
+		if (str[pos] == to_find[0])
+		{
+			i = 1;
+			while (to_find[i] != '\0' && str[pos + i] == to_find[i])
+				++i;
+			if (to_find[i] == '\0')
+				return (&str[pos]);
+		}
+		++pos;
+	}
+	return (0);
 }

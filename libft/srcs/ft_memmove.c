@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 18:35:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/14 18:43:09 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/15 13:00:43 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
-
 	if (d == s)
 		return (dst);
 	if (s < d)
