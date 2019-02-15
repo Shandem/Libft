@@ -1,30 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wordcount.c                                     :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 13:04:23 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/14 13:21:20 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/14 15:35:15 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/14 15:39:47 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_wordcount(char const *str, char delim)
-{
-	unsigned int i;
-
-	i = 0;
-	while (*str)
-	{
-		while (*str == delim)
-			str++;
-		if (*str != '\0')
-			i++;
-		while (*str && *str != delim)
-			str++;
-	}
-	return (i);
-}
+void	ft_memccpy(void dst, const void src, int c,  size_t n)

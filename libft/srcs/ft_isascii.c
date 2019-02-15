@@ -6,13 +6,13 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 13:39:58 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/11 13:40:01 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/14 13:25:33 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int		ft_isascii(int c)
 {
 	return ( c >= 0 && c <= '~' + 1 : 0);
 }

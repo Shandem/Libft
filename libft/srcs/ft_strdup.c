@@ -6,16 +6,16 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 13:44:59 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/11 13:45:01 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/14 14:19:22 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
-	char *n;
-	int	i;
+	char	*n;
+	int		i;
 
 	n = malloc(sizeof(*src));
 	if (n == NULL)

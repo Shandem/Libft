@@ -6,13 +6,13 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 13:37:03 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/11 13:38:16 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/14 14:27:45 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned int i;
 	long res;
