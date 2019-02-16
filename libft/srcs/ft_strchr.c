@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/14 18:35:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/15 13:51:24 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/15 14:27:31 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/15 15:05:10 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.f"
+#include "libft.h"
 
-void	memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(const char *str, int c)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-
-	d = (unsigned char*)dst;
-	s = (unsigned char*)src;
-	if (d == s)
-		return (dst);
-	if (s < d)
-	{
-		d += len - 1;
-		s += len - 1;
-		while (len--)
-			*d-- = *s--;
-	}
-	else
-		while (len--)
-			*d++ = *s++;
-	return (dst);
+	while (*str != (char)c)
+		if (!*str++)
+			return (NULL);
+	return ((char*)str);
 }
