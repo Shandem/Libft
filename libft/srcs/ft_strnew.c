@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 15:05:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/18 10:44:15 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/18 12:40:22 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/18 12:43:38 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strnew(size_t size)
 {
-	const char *last;
+	char	*out;
 
-	last = NULL;
-	if (i)
-		while ((s = strchr(s, i)))
-		{
-			last = s;
-			s++;
-		}
-	else
-		last = strchr(s, i);
-	return (char*) last;
+	out = (char*)ft_memalloc(size + 1);
+	if (!out)
+		return (NULL);
+	out[size] = '\0';
+	return (out);
 }

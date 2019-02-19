@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 15:05:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/18 10:44:15 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/18 12:45:43 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/18 12:46:46 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+void	ft_strdel(char **as)
 {
-	const char *last;
-
-	last = NULL;
-	if (i)
-		while ((s = strchr(s, i)))
-		{
-			last = s;
-			s++;
-		}
-	else
-		last = strchr(s, i);
-	return (char*) last;
+	if (as)
+		ft_memdel((void **)as);
 }
