@@ -46,10 +46,13 @@ char    *ft_strstr(char *str, char *to_find);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strnew(size_t size);
 char    *ft_strncat(char *dest, char *src, int nb);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*F)(unsigned int, char ));
 
 
 void    ft_strdel(char **as);
 void    ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(char *));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putchar(char c);
 void    ft_putstr_fd(char *str, int fd);
