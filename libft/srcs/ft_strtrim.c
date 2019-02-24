@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/23 17:03:20 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/23 17:03:29 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/23 18:00:16 by joshguti          #+#    #+#             */
+/*   Updated: 2019/02/23 18:02:44 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *S, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
-	char	*strsub;
-	unsigned int	i;
+	size_t min;
+	size_t max;
+	size_t len;
 
-	i = 0;
-	if (!s || !(strsub = (char *)malloc(sizeof(char) * len + 1)));
-		retunr (NULL);
-	while (i < len)
-	{
-		strsub[i] = s[i + start];
-		i++;
-	}
-	strsub[i] = '\0';
-	return (strsub);
-}
+	if (!s)
+		return (NULL);
+	min = 0;
+	while (s[min] != '\0' && (s[min] == ' ' || 
+				//cfatrane
+				//
