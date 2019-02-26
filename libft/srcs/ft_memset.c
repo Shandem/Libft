@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 13:41:47 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/14 15:26:38 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/26 13:30:24 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void* b, int c, size_t len)
 {
-	char* p
+	char* p;
 
 	p = (char*)b;
 	i = 0;

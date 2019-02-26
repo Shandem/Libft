@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 15:05:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/18 10:44:15 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/02/26 13:22:26 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 		}
 	else
 		last = strchr(s, i);
-	return (char*) last;
+	return (char*)last;
 }
