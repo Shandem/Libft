@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 13:48:30 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/21 10:52:06 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/01 11:54:08 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int ft_strlen(char *str);
 int ft_strcmp(char *s1, char *s2);
 int ft_strncmp(char *s1, char *s2, unsigned int n);
 int ft_memcmp(const void *s1, const void *s2, int n);
+int	ft_whitespace(int i);
 
 unsigned int    ft_strlcat(char *dst, const char *src, unsigned int size);
 unsigned int    ft_wordcount(char const *str, char delim);
@@ -48,13 +49,16 @@ char    *ft_strnew(size_t size);
 char    *ft_strncat(char *dest, char *src, int nb);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*F)(unsigned int, char ));
-
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 
 void    ft_strdel(char **as);
 void    ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(char *));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putchar(char c);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 void    ft_putstr_fd(char *str, int fd);
 void    ft_putstr(char *str);
 void    ft_strclr(char *s);
