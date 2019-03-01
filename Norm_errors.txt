@@ -1,0 +1,103 @@
+Norme: ./Norm_errors.txt
+Warning: Not a valid file
+Norme: ./README.md
+Warning: Not a valid file
+Norme: ./Makefile
+Warning: Not a valid file
+Norme: ./author
+Warning: Not a valid file
+Norme: ./ft_strrchr.c
+Norme: ./ft_putstr.c
+Norme: ./ft_islower.c
+Norme: ./ft_strcmp.c
+Norme: ./ft_strlcat.c
+Norme: ./ft_memcpy.c
+Norme: ./ft_memmove.c
+Norme: ./ft_isspace.c
+Norme: ./ft_strncpy.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3, col 4): bad spacing
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 7): bad indentation
+Error (line 7): must begin only by tabulations
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Norme: ./ft_strsplit.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/ft_strsplit.c may not compile or is invalid for some reasons.
+Norme: ./ft_wordcount.c
+Norme: ./ft_striter.c
+Norme: ./ft_isdigit.c
+INorme: ./ft_putnbr.c
+Norme: ./ft_strstr.c
+Norme: ./ft_isupper.c
+Norme: ./ft_strdel.c
+Norme: ./ft_memccpy.c
+Norme: ./ft_memchr.c
+Norme: ./ft_bzero.c
+Norme: ./ft_putstr_fd.c
+Norme: ./ft_isalnum.c
+Norme: ./ft_toupper.c
+Norme: ./ft_strdup.c
+Norme: ./ft_strcpy.c
+Norme: ./ft_putnbr_fd.c
+Norme: ./libft.h
+Error: global scope bad aligned
+Norme: ./ft_putendl_fd.c
+Norme: ./ft_striteri.c
+Norme: ./ft_strmap.c
+Error (line 15): declarations in ft_strmap are bad aligned
+Norme: ./ft_memdel.c
+Norme: ./ft_isascii.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/ft_isascii.c may not compile or is invalid for some reasons.
+Norme: ./ft_putchar.c
+Norme: ./ft_strnstr.c
+Error (line 15): declarations in ft_strnstr are bad aligned
+Norme: ./ft_strlen.c
+Norme: ./ft_strnew.c
+Norme: ./ft_strsub.c
+Error (line 15): declarations in ft_strsub are bad aligned
+Norme: ./ft_memalloc.c
+Norme: ./ft_putendl.c
+Norme: ./ft_strncat.c
+Norme: ./ft_strncmp.c
+Norme: ./ft_memcmp.c
+Norme: ./ft_itoa.c
+Error: global scope bad aligned
+Error (line 29): declarations in ft_itoa are bad aligned
+Norme: ./ft_putchar_fd.c
+Norme: ./ft_strequ.c
+Error: file must end with a single empty line
+Norme: ./ft_isalpha.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/ft_isalpha.c may not compile or is invalid for some reasons.
+Norme: ./ft_strcat.c
+Norme: ./ft_strnequ.c
+Norme: ./ft_strjoin.c
+Norme: ./ft_atoi.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/ft_atoi.c may not compile or is invalid for some reasons.
+Norme: ./ft_strtrim.c
+Norme: ./ft_tolower.c
+Norme: ./ft_strclr.c
+Norme: ./ft_whitespace.c
+Norme: ./ft_strmapi.c
+Error (line 15): declarations in ft_strmapi are bad aligned
+Norme: ./ft_strchr.c
+Norme: ./ft_isprint.c

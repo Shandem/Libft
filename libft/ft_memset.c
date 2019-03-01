@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 13:41:47 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/26 13:30:24 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/01 15:52:18 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/01 15:53:48 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void* b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char* p;
+	char *p;
 
-	p = (char*)b;
-	i = 0;
-	while (size_t i != len)
-		++i;
-	p[i] = c;
-	return b;
+	p = (char *)b;
+	while (len > 0)
+	{
+		p[len - 1] = c;
+		len--;
+	}
+	return (b);
 }
