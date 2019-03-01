@@ -1,4 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: joshguti <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/01 11:29:21 by joshguti          #+#    #+#              #
+#    Updated: 2019/03/01 11:34:20 by joshguti         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME=libft.a
+
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra
 
 SRCS=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 		 	ft_islower.c ft_isprint.c ft_isspace.c ft_isupper.c ft_itoa.c ft_memalloc.c\
@@ -11,18 +27,22 @@ SRCS=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 			ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c\
 			ft_wordcount.c
 
-OBJECTS=
+OBJ = $(SRC:.c=.o)
 
 INCLUDE=./
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
 
 clean:
-			@/bin/rm -f $(OBJECTS)
+			rm -f $(OBJ)
 
 fclean: clean
-				@/bin/rm -f $(NAME)
+			rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean all re
