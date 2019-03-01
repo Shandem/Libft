@@ -6,13 +6,13 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 11:38:06 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/01 11:42:19 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/01 11:46:53 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_whitespace(int i)
+int		ft_whitespace(int i)
 {
 	if (i == 32 || i >= 9 && i <= 13)
 		return (1);
