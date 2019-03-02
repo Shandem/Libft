@@ -1,0 +1,69 @@
+Norme: ./Norm_errors.txt
+Warning: Not a valid file
+Norme: ./Makefile
+Warning: Not a valid file
+Norme: ./author
+Warning: Not a valid file
+Norme: ./src/ft_strrchr.c
+Norme: ./src/ft_islower.c
+Norme: ./src/ft_putstr.c
+Norme: ./src/ft_strcmp.c
+Norme: ./src/ft_strlcat.c
+Norme: ./src/ft_memcpy.c
+Norme: ./src/ft_memmove.c
+Norme: ./src/ft_isspace.c
+Norme: ./src/ft_strsplit.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/src/ft_strsplit.c may not compile or is invalid for some reasons.
+Norme: ./src/ft_strncpy.c
+Norme: ./src/ft_wordcount.c
+Norme: ./src/ft_striter.c
+Norme: ./src/ft_isdigit.c
+Norme: ./src/ft_putnbr.c
+Norme: ./src/ft_strstr.c
+Norme: ./src/ft_isupper.c
+Norme: ./src/ft_strdel.c
+Norme: ./src/ft_memccpy.c
+Norme: ./src/ft_memchr.c
+Norme: ./src/ft_bzero.c
+Norme: ./src/ft_isalnum.c
+Norme: ./src/ft_putstr_fd.c
+Norme: ./src/ft_toupper.c
+Norme: ./src/ft_strcpy.c
+Norme: ./src/ft_strdup.c
+Norme: ./src/ft_striteri.c
+Norme: ./src/ft_putnbr_fd.c
+Norme: ./src/ft_strmap.c
+Norme: ./src/ft_putendl_fd.c
+Norme: ./src/ft_memdel.c
+Norme: ./src/ft_putchar.c
+Norme: ./src/ft_isascii.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/src/ft_isascii.c may not compile or is invalid for some reasons.
+Norme: ./src/ft_strnstr.c
+Norme: ./src/ft_strlen.c
+Norme: ./src/ft_strsub.c
+Norme: ./src/ft_strnew.c
+Norme: ./src/ft_memalloc.c
+Norme: ./src/ft_putendl.c
+Norme: ./src/ft_strncat.c
+Norme: ./src/ft_strncmp.c
+Norme: ./src/ft_memcmp.c
+Norme: ./src/ft_itoa.c
+Norme: ./src/ft_putchar_fd.c
+Norme: ./src/ft_strequ.c
+Norme: ./src/ft_strtrim.c
+Norme: ./src/ft_memset.c
+Norme: ./src/ft_isalpha.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/src/ft_isalpha.c may not compile or is invalid for some reasons.
+Norme: ./src/ft_tolower.c
+Norme: ./src/ft_strnequ.c
+Norme: ./src/ft_strcat.c
+Norme: ./src/ft_strjoin.c
+Norme: ./src/ft_atoi.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/src/ft_atoi.c may not compile or is invalid for some reasons.
+Norme: ./src/ft_strmapi.c
+Warning: /nfs/2018/j/joshguti/Documents/Libft/libft/src/ft_strmapi.c may not compile or is invalid for some reasons.
+Norme: ./src/ft_strclr.c
+Norme: ./src/ft_whitespace.c
+Norme: ./src/ft_isprint.c
+Norme: ./src/ft_strchr.c
+Norme: ./includes/libft.h

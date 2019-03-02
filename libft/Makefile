@@ -6,15 +6,15 @@
 #    By: joshguti <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/01 11:29:21 by joshguti          #+#    #+#              #
-#    Updated: 2019/03/01 11:34:20 by joshguti         ###   ########.fr        #
+#    Updated: 2019/03/01 17:23:14 by joshguti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
 
-CC = gcc
+CC=gcc
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS=-Wall -Werror -Wextra
 
 SRCS=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 		 	ft_islower.c ft_isprint.c ft_isspace.c ft_isupper.c ft_itoa.c ft_memalloc.c\
@@ -27,13 +27,13 @@ SRCS=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 			ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c\
 			ft_wordcount.c
 
-OBJ = $(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 
-INCLUDE=./
+INCLUDE=./libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(CC) $(CFLAGS) -c $(SRC) $(INCLUDE)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/26 12:23:32 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/26 13:18:08 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/21 15:34:14 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/01 16:34:35 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *strsub;
-	unsigned int i;
+	unsigned int	i;
+	char			*fresh
 
-	i = 0;
-	if (!s || !(strsub = (char *)malloc(sizeof(char) * len + 1)))
+	if (!s)
 		return (NULL);
-	while (i < len)
-	{
-		strsub[i] = s[i + start];
-		i++;
-	}
-	strsub[i] = '\0';
-	return (strsub);
+	if (!(fresh = (char *)malloc(sizeof(*s) * ft_strlen(s) + 1)))
+		return (NULL);
+	i = 0;
+	while (s[i])
+		fresh[i] = f(i, s[i++]);
+	fresh[i] = '\0';
+	return (fresh);
 }

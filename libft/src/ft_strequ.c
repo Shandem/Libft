@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 15:34:14 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/26 12:38:56 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/23 17:01:39 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/01 16:39:45 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_strequ(char const *s1, char const *s2)
 {
-	unsigned int i;
-	char	*fresh;
-
-	if (!s)
-		return (NULL);
-	if (!(fresh = (char *)malloc(sizeof(*s) * ft_strlen(s) + 1)))
-		return (NULL);
-	i = 0;
-	while (s[i])
-		fresh[i] = f(i, s[i++]);
-	fresh[i] = '\0';
-	return (fresh);
+	if (!s1 || !s2)
+		return (0);
+	if (ft_strlen(s1) != ft_strlen(s2))
+		return (0);
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (1);
 }

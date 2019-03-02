@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/23 17:01:39 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/26 13:20:58 by joshguti         ###   ########.fr       */
+/*   Created: 2019/02/21 14:04:32 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/01 16:35:04 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	if (!s1 || !s2)
-		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (1);
-}
+	unsigned int	i;
+	char			*fresh;
 
+	fresh = ft_strnew(ft_strlen(s));
+	if (fresh == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		fresh[i] = f(s[i]);
+		i++;
+	}
+	return (fresh);
+}

@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 12:56:13 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/01 13:04:50 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/01 16:29:33 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int			lcpy;
+	int		lcpy;
 	char	*h;
 	char	*n;
 
