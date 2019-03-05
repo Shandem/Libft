@@ -6,11 +6,11 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 18:35:43 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/15 13:51:24 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/04 15:59:08 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.f"
+#include "libft.h"
 
 void	ft_memmove(void *dst, const void *src, size_t len)
 {

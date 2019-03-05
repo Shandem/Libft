@@ -1,0 +1,285 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    gcc_errors.txt                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: joshguti <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/04 16:45:30 by joshguti          #+#    #+#              #
+#    Updated: 2019/03/04 16:45:54 by joshguti         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+src/ft_isascii.c:17:35: error: expected ')'
+        return ((c >= 0 && c <= '~' + 1 )0);
+                                         ^
+src/ft_isascii.c:17:9: note: to match this '('
+        return ((c >= 0 && c <= '~' + 1 )0);
+               ^
+1 error generated.
+
+
+
+
+
+
+
+
+src/ft_itoa.c:27:9: error: implicit declaration of function 'ft_strjoin' is invalid in C99
+      [-Werror,-Wimplicit-function-declaration]
+                str = ft_strjoin(str, ft_itoa(-n));
+                      ^
+src/ft_itoa.c:27:9: note: did you mean 'ft_strlen'?
+src/libft.h:32:8: note: 'ft_strlen' declared here
+int                             ft_strlen(char *str);
+                                ^
+src/ft_itoa.c:27:7: error: incompatible integer to pointer conversion assigning to 'char *' from 'int'
+      [-Werror,-Wint-conversion]
+                str = ft_strjoin(str, ft_itoa(-n));
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/ft_itoa.c:30:7: error: incompatible integer to pointer conversion assigning to 'char *' from 'int'
+      [-Werror,-Wint-conversion]
+                str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 errors generated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+src/ft_memccpy.c:26:7: error: assigning to 'void *' from incompatible type 'void'
+                dst = ft_memcpy(dst, src, clen);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+src/ft_memccpy.c:30:7: error: assigning to 'void *' from incompatible type 'void'
+                dst = ft_memcpy(dst, src, n);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+
+
+
+
+
+
+
+
+
+src/ft_memcpy.c:24:2: error: void function 'ft_memcpy' should not return a value [-Wreturn-type]
+        return (dst);
+        ^      ~~~~~
+1 error generated.
+src/ft_memmove.c:23:3: error: void function 'ft_memmove' should not return a value [-Wreturn-type]
+                return (dst);
+                ^      ~~~~~
+src/ft_memmove.c:34:2: error: void function 'ft_memmove' should not return a value [-Wreturn-type]
+        return (dst);
+        ^      ~~~~~
+2 errors generated.
+
+
+
+
+
+
+
+
+
+
+
+src/ft_putendl.c:17:12: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        ft_putstr(s);
+                  ^
+src/libft.h:63:24: note: passing argument to parameter 'str' here
+void                    ft_putstr(char *str);
+                                        ^
+1 error generated.
+src/ft_putendl_fd.c:17:15: error: passing 'const char *' to parameter of type 'char *' discards
+      qualifiers [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        ft_putstr_fd(s, fd);
+                     ^
+src/libft.h:62:27: note: passing argument to parameter 'str' here
+void                    ft_putstr_fd(char *str, int fd);
+                                           ^
+1 error generated.
+src/ft_strcat.c:25:22: error: unsequenced modification and access to 'j' [-Werror,-Wunsequenced]
+                dest[i + j] = src[j++];
+                         ~         ^
+1 error generated.
+src/ft_strclr.c:18:27: error: use of undeclared identifier 'str'
+                ft_bzero(str, ft_strlen(str));
+                                        ^
+src/ft_strclr.c:18:12: error: use of undeclared identifier 'str'
+                ft_bzero(str, ft_strlen(str));
+                         ^
+2 errors generated.
+src/ft_strequ.c:19:16: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        if (ft_strlen(s1) != ft_strlen(s2))
+                      ^~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strequ.c:19:33: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        if (ft_strlen(s1) != ft_strlen(s2))
+                                       ^~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+2 errors generated.
+src/ft_striteri.c:15:6: error: conflicting types for 'ft_striteri'
+void    ft_striteri(char *s, void (*f)(unsigned int, char *))
+        ^
+src/libft.h:57:8: note: previous declaration is here
+void                    ft_striteri(char *s, void (*f)(char *));
+                        ^
+src/ft_striteri.c:23:13: error: unsequenced modification and access to 'i' [-Werror,-Wunsequenced]
+                        f(i, &s[i++]);
+                          ~      ^
+2 errors generated.
+src/ft_strjoin.c:20:18: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        len = ft_strlen(s1) + ft_strlen(s2);
+                        ^~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strjoin.c:20:34: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        len = ft_strlen(s1) + ft_strlen(s2);
+                                        ^~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strjoin.c:22:10: error: using the result of an assignment as a condition without parentheses
+      [-Werror,-Wparentheses]
+        if (str = NULL)
+            ~~~~^~~~~~
+src/ft_strjoin.c:22:10: note: place parentheses around the assignment to silence this warning
+        if (str = NULL)
+                ^
+            (         )
+src/ft_strjoin.c:22:10: note: use '==' to turn this assignment into an equality comparison
+        if (str = NULL)
+                ^
+                ==
+src/ft_strjoin.c:24:17: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        ft_strcpy(str, s1);
+                       ^~
+src/libft.h:44:36: note: passing argument to parameter 'src' here
+char                    *ft_strcpy(char *dst, char *src);
+                                                    ^
+src/ft_strjoin.c:25:17: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        ft_strcat(str, s2);
+                       ^~
+src/libft.h:42:37: note: passing argument to parameter 'src' here
+char                    *ft_strcat(char *dest, char *src);
+                                                     ^
+5 errors generated.
+src/ft_strlcat.c:20:35: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        len = ft_strlen(dst) + ft_strlen(src);
+                                         ^~~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strlcat.c:22:21: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+                return (ft_strlen(src) + size);
+                                  ^~~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strlcat.c:26:38: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        while ((i < size - (len - ft_strlen(src)) - 1) && src[i])
+                                            ^~~
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strlcat.c:21:11: error: comparison of integers of different signs: 'unsigned int' and 'int'
+      [-Werror,-Wsign-compare]
+        if (size <= ft_strlen(dst))
+            ~~~~ ^  ~~~~~~~~~~~~~~
+4 errors generated.
+src/ft_strmap.c:20:30: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        fresh = ft_strnew(ft_strlen(s));
+                                    ^
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+1 error generated.
+src/ft_strmapi.c:18:15: error: expected ';' at end of declaration
+        char                    *fresh
+                                      ^
+                                      ;
+src/ft_strmapi.c:22:54: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        if (!(fresh = (char *)malloc(sizeof(*s) * ft_strlen(s) + 1)))
+                                                            ^
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strmapi.c:26:22: error: unsequenced modification and access to 'i' [-Werror,-Wunsequenced]
+                fresh[i] = f(i, s[i++]);
+                      ~            ^
+3 errors generated.
+src/ft_strrchr.c:20:6: error: use of undeclared identifier 'i'
+        if (i)
+            ^
+src/ft_strrchr.c:21:25: error: use of undeclared identifier 'i'
+                while ((s = strchr(s, i)))
+                                      ^
+src/ft_strrchr.c:27:20: error: use of undeclared identifier 'i'
+                last = strchr(s, i);
+                                 ^
+src/ft_strrchr.c:15:37: error: unused parameter 'c' [-Werror,-Wunused-parameter]
+char    *ft_strrchr(const char *s, int c)
+                                       ^
+4 errors generated.
+src/ft_strsplit.c:78:9: error: incompatible pointer to integer conversion returning 'char **' from a
+      function with result type 'char' [-Werror,-Wint-conversion]
+        return (arr);
+               ^~~~~
+src/ft_strsplit.c:90:27: error: expected ')'
+                arr = make_array(arr, s c);
+                                        ^
+src/ft_strsplit.c:90:19: note: to match this '('
+                arr = make_array(arr, s c);
+                                ^
+2 errors generated.
+src/ft_strtrim.c:24:21: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+                return (ft_strdup(s + start));
+                                  ^~~~~~~~~
+src/libft.h:43:25: note: passing argument to parameter 'src' here
+char                    *ft_strdup(char *src);
+                                         ^
+src/ft_strtrim.c:25:18: error: passing 'const char *' to parameter of type 'char *' discards qualifiers
+      [-Werror,-Wincompatible-pointer-types-discards-qualifiers]
+        len = ft_strlen(s) - 1;
+                        ^
+src/libft.h:32:24: note: passing argument to parameter 'str' here
+int                             ft_strlen(char *str);
+                                                ^
+src/ft_strtrim.c:28:10: error: implicit declaration of function 'ft_strsub' is invalid in C99
+      [-Werror,-Wimplicit-function-declaration]
+        return (ft_strsub(s, start, len - start + 1));
+                ^
+src/ft_strtrim.c:28:9: error: incompatible integer to pointer conversion returning 'int' from a function
+      with result type 'char *' [-Werror,-Wint-conversion]
+        return (ft_strsub(s, start, len - start + 1));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 errors generated.

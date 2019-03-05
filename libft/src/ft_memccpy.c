@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 14:15:15 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/15 14:15:23 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/04 16:42:06 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/04 16:42:42 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	*found;
-	int				clen;
-	unsigned char	*s;
+	size_t			x;
+	unsigned char	*dst_c;
+	unsigned char	*src_c;
+	unsigned char	d;
+	unsigned char	*ptr;
 
-	found = ft_memchr(src, (unsigned char)c, n);
-	clen = found - (unsigned char*)src + 1;
-	s = (unsigned char*)src;
-	if (found)
+	d = (unsigned char)c;
+	dst_c = (unsigned char *)dst;
+	src_c = (unsigned char *)src;
+	x = 0;
+	while (x < n)
 	{
-		dst = ft_memcpy(dst, src, clen);
-		return (dst + clen);
+		dst_c[x] = src_c[x];
+		if (src_c[x] == d)
+		{
+			ptr = &dst_c[x + 1];
+			return (ptr);
+		}
+		x++;
 	}
-	else
-		dst = ft_memcpy(dst, src, n);
 	return (NULL);
 }
