@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/26 12:21:27 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/26 13:25:41 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/06 11:04:59 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/06 11:10:56 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,25 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t start;
-	size_t len;
+	int	e;
+	int	b;
+	int	x;
+	char *ptr;
 
-	start = 0;
-	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
-		start++;
-	if (s[start] == '\0')
-		return (ft_strdup(s + start));
-	len = ft_strlen(s) - 1;
-	while ((s[len] == ' ' || s[len] == '\n' || s[len] == '\t'))
-		len--;
-	return (ft_strsub(s, start, len - start + 1));
+	x = 0;
+	b = 0;
+	if (!s)
+		return (NULL);
+	while (s[b] == ' ' || s[b] == '\t' || s[b] == '\n')
+		b++;
+	e = b;
+	while (s[e + 1] != '\0')
+		e--;
+	ptr = (char*)malloc((sizeof(char) * (e - b)) + 2);
+	if (ptr == NULL)
+		return (NULL);
+	while (b <= e)
+		ptr[x++] = s[b++];
+	ptr[x] = '\0';
+	return (ptr);
 }

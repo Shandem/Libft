@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 12:47:56 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/18 12:51:31 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/06 10:48:09 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_strclr(char *s)
 {
-	if (s)
-		ft_bzero(str, ft_strlen(str));
+	int c;
+	
+	if (!s)
+	return ;
+	c = -1;
+	while (s[++c] != '\0')
+		s[c] = '\0';
 }

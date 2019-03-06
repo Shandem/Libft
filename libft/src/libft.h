@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 14:16:02 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/04 14:16:14 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/06 10:43:44 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,18 @@ int				ft_isascii(int c);
 int				ft_isalpha(int c);
 int				ft_isalnum(int c);
 int				ft_isspace(int c);
-int				ft_strlen(char *str);
 int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, int n);
 int				ft_whitespace(int i);
 
+size_t				ft_strlen(const char *str);
+
 unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size);
 unsigned int	ft_wordcount(char const *str, char delim);
 
 char			*ft_strchr(const char *str, int c);
-char			*ft_strcat(char *dest, char *src);
+char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strdup(char *src);
 char			*ft_strcpy(char *dst, char *src);
 char			*ft_strstr(char *str, char *to_find);
