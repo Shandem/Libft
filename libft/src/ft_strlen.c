@@ -6,18 +6,18 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 13:57:35 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/15 13:58:36 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/06 10:06:29 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t ft_strlen(const char *str)
 {
-	int i;
+	size_t counter;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	counter = -1;
+	while (str[++counter] != '\0')
+		;
+	return (counter);
 }
