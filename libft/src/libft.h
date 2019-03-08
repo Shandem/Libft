@@ -55,7 +55,8 @@ char			*ft_strncpy(char *dst, const char *src, size_t len);
 
 void			ft_strdel(char **as);
 void			ft_striter(char *s, void (*f)(char *));
-void			ft_striteri(char *s, void (*f)(unsigned int, char *));;
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+void			ft_putendl_fd(char const *s, int fd);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putchar(char c);
 void			ft_putnbr(int n);
@@ -64,7 +65,7 @@ void			ft_putstr_fd(char *str, int fd);
 void			ft_putstr(char *str);
 void			ft_strclr(char *s);
 void			*ft_memchr(const void *str, int c, size_t n);
-void			ft_memcpy(void *restrict d, const void *restrict s, size_t n);
+void			*ft_memcpy(void *restrict d, const void *restrict s, size_t n);
 void			ft_memdel(void **ap);
 void			ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
