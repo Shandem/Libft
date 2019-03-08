@@ -41,12 +41,12 @@ unsigned int	ft_wordcount(char const *str, char delim);
 
 char			*ft_strchr(const char *str, int c);
 char			*ft_strcat(char *s1, const char *s2);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 char			*ft_strcpy(char *dst, char *src);
 char			*ft_strstr(char *str, char *to_find);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnew(size_t size);
-char			*ft_strncat(char *dest, char *src, int nb);
+char			*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strnstr(const char *haystack, const char *needle,
@@ -55,7 +55,7 @@ char			*ft_strncpy(char *dst, const char *src, size_t len);
 
 void			ft_strdel(char **as);
 void			ft_striter(char *s, void (*f)(char *));
-void			ft_striteri(char *s, void (*f)(char *));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));;
 void			ft_putchar_fd(char c, int fd);
 void			ft_putchar(char c);
 void			ft_putnbr(int n);
