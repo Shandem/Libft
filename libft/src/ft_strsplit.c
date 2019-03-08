@@ -31,7 +31,7 @@ char	**ft_strsplit(char const *str, char delim)
 		while (str[i] && str[i] != delim)
 			i++;
 		if (i > start)
-			out[oi++] = ft_strndup(str + start, i - start);
+			out[oi++] = ft_strdup(str + start, i - start);
 	}
 	out[oi] = NULL;
 	return (out);
