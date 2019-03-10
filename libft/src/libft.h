@@ -67,7 +67,7 @@ void			ft_strclr(char *s);
 void			*ft_memchr(const void *str, int c, size_t n);
 void			*ft_memcpy(void *restrict d, const void *restrict s, size_t n);
 void			ft_memdel(void **ap);
-void			ft_memmove(void *dst, const void *src, size_t len);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memalloc(size_t size);
 void			ft_bzero(void *str, size_t n);
