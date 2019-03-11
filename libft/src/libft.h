@@ -48,10 +48,15 @@ char			*ft_strrchr(const char *s, int c);
 char			*ft_strnew(size_t size);
 char			*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 char			*ft_strmap(char const *s, char (*f)(char));
+char			**ft_strsplit(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
+
+char			**ft_words(char const *s, char c);
+char			*ft_fill(char const *s, char *ptr, char c, int i);
+char			*ft_letters(char const *s, char c, int letter);
 
 void			ft_strdel(char **as);
 void			ft_striter(char *s, void (*f)(char *));

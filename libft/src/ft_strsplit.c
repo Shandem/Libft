@@ -1,38 +1,27 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/08 10:20:26 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/08 10:20:30 by joshguti         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-char	**ft_strsplit(char const *str, char delim)
+char	**ft_strsplit(char const *s, char c)
 {
-	char	**out;
-	int	oi;
-	int	i;
-	int	start;
+	int	letter;
+	int	word;
+	char	**ptr;
 
-	if (!str || !(out = (char**)malloc(sizeof(char*) * (ft_wordcount(str, delim)) + 1)))
+	if ((!c) || (!s))
 		return (NULL);
-	oi = 0;
-	i = 0;
-	while (str[i])
+	word = 0;
+	letter = -1;
+	ptr = ft_words(s, c);
+	if (!ptr)
+		return (NULL);
+	while (s[++letter] != '\0')
 	{
-		while (str[i] == delim)
-			i++;
-		start = i;
-		while (str[i] && str[i] != delim)
-			i++;
-		if (i > start)
-			out[oi++] = ft_strdup(str + start, i - start);
+		if (s[letter] != c)
+		{
+			ptr[word] = ft_letters(s, c, letter);
+			while (s[letter] != c && s[letter + 1] != '\0')
+				letter++;
+			word++;
+		}
 	}
-	out[oi] = NULL;
-	return (out);
+	return (ptr);
 }
