@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 13:42:15 by joshguti          #+#    #+#             */
-/*   Updated: 2019/02/11 13:42:18 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/08 11:16:33 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/12 14:29:05 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_itoa(int n)
 {
-	write(1, &c, 1);
+	char	*out;
+	int		ncpy;
+	int		w;
+	int		sign;
+
+	ncpy = n;
+	w = 1;
+	while ((ncpy /= 10))
+		w++;
+	sign = n < 0 ? 1 : 0;
+	out = ft_strnew(w + sign);
+	if (out == NULL)
+		return (NULL);
+	if (sign)
+		out[0] = '-';
+	while (w--)
+	{
+		out[sign + w] = '0' + (sign ? -(n % 10) : (n % 10));
+		n /= 10;
+	}
+	return (out);
 }

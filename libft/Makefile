@@ -5,25 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: joshguti <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/03/04 13:59:40 by joshguti          #+#    #+#              #
-#    Updated: 2019/03/04 14:12:48 by joshguti         ###   ########.fr        #
+#    Created: 2019/03/12 16:28:35 by joshguti          #+#    #+#              #
+#    Updated: 2019/03/12 16:34:00 by joshguti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME= libft.a
 
-SRC = src/*.c
+SRCS= *.c
 
-all : $(NAME)
+OBJECTS= *.o
 
-$(NAME) :
-							gcc -c -Wall -Werror -Wextra $(SRC)
-							ar rc $(NAME) -o $(NAME)
+INCLUDES=./
 
-clean :
-							/bin/rm -f *.o
+all: $(NAME)
 
-fclean : clean
-							/bin/rm -rf $(NAME)
+$(NAME): $(SRCS) libft.h
+	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
 
-re : fclean all
+clean:
+	@/bin/rm -f $(OBJECTS)
+
+fclean: clean
+	@/bin/rm -f $(NAME)
+
+re: fclean all

@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/08 11:16:33 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/12 14:10:59 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/01 15:14:24 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/12 14:22:51 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int		ft_atoi(const char *str)
 {
-	char	*out;
-	int		ncpy;
-	int		w;
-	int		sign;
+	int	i;
+	int sign;
+	int nbr;
 
-	ncpy = n;
-	w = 1;
-	while ((ncpy /= 10))
-		w++;
-	sign = n < 0 ? 1 : 0;
-	out = ft_strnew(w + sign);
-	if (out == NULL)
-		return (NULL);
-	if (sign)
-		out[0] = '-';
-	while (w--)
-	{
-		out[sign + w] = '0' + (sign ? -(n % 10) : (n % 10));
-		n /= 10;
-	}
-	return (out);
+	i = 0;
+	sign = 1;
+	nbr = 0;
+	if (!str[i])
+		return (0);
+	while (ft_whitespace(str[i]))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+		sign = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+		nbr = (nbr * 10) + (str[i++] - '0');
+	return (nbr * sign);
 }

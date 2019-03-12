@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 14:16:02 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/12 14:11:40 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 15:47:47 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <ctype.h>
+# include <xlocale.h>
 
 int				ft_atoi(const char *str);
 int				ft_isprint(int c);
@@ -44,7 +46,7 @@ unsigned int	ft_wordcount(char const *str, char delim);
 char			*ft_strtrim(char const *s);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strcat(char *s1, const char *s2);
-char			*ft_strdup(const char *src);i
+char			*ft_strdup(const char *src);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strcpy(char *dst, char *src);
