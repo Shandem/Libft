@@ -17,7 +17,7 @@ SRC = src/*.c
 all : $(NAME)
 
 $(NAME) :
-							gcc -c -Wall -Werror -Wextra $(SRC)
+							gcc -c -Wall -Werror -Wextra $(SRC) &> /dev/null
 							ar rc $(NAME) -o $(NAME)
 
 clean :
