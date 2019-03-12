@@ -6,25 +6,25 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 12:23:02 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/06 10:44:43 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 12:43:25 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1,const char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;
 
 	j = -1;
-	i = -1;;
+	i = -1;
 	while (s1[++i])
 		;
 	while (s2[++j])
 	{
-	  s1[i] = s2[j];
-	  i++;
-  }
+		s1[i] = s2[j];
+		i++;
+	}
 	return (s1);
 }

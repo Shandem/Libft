@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 15:34:14 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/01 16:34:35 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 13:47:23 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char		*fresh;
+	char			*fresh;
 
 	if (!s || !(fresh = ft_strnew(ft_strlen(s))))
 		return (NULL);

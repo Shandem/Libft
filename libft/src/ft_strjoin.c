@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:33:59 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/08 13:34:14 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 14:09:17 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*out;
-	int	l1;
-	int	l2;
+	int		l1;
+	int		l2;
 
 	if (!s1 && !s2)
 		return (ft_strnew(0));

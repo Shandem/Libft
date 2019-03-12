@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/01 15:14:24 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/04 15:10:00 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 12:50:26 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_atoi(const char *str)
 	if (!str[i])
 		return (0);
 	while (ft_whitespace(str[i]))
-			i++;
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 		sign = -1;
 	while (str[i] >= '0' && str[i] <= '9')

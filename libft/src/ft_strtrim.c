@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/06 11:04:59 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/06 11:10:56 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/12 14:11:29 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int	e;
-	int	b;
-	int	x;
-	char *ptr;
+	int		e;
+	int		b;
+	int		x;
+	char	*ptr;
 
 	x = 0;
 	b = 0;
