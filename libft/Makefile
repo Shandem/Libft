@@ -16,7 +16,13 @@ SRCS= *.c
 
 OBJECTS= *.o
 
+<<<<<<< HEAD
 INCLUDES=./
+=======
+$(NAME) :
+							gcc -c -Wall -Werror -Wextra $(SRC) &> /dev/null
+							ar rc $(NAME) -o $(NAME)
+>>>>>>> f5e29f0fb0f676e9b321a6280616a7a9161ebfca
 
 all: $(NAME)
 
