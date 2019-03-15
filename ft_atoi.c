@@ -5,34 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 13:37:03 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/01 15:11:11 by joshguti         ###   ########.fr       */
+/*   Created: 2019/03/01 15:14:24 by joshguti          #+#    #+#             */
+/*   Updated: 2019/03/12 14:22:51 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 int		ft_atoi(const char *str)
 {
-	unsigned int i;
-	long res;
-	long neg;
+	int	i;
+	int sign;
+	int nbr;
 
 	i = 0;
-	res = 0;
-	neg = 1;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	sign = 1;
+	nbr = 0;
+	if (!str[i])
+		return (0);
+	while (ft_whitespace(str[i]))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			neg = -1;
-		i++;
-	}
+		sign = -1;
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return ((int)(res * sign));
+		nbr = (nbr * 10) + (str[i++] - '0');
+	return (nbr * sign);
 }
