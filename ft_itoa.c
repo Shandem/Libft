@@ -16,9 +16,9 @@
 char	*ft_itoa(int n)
 {
 	char	*out;
-	int		ncpy;
-	int		w;
-	int		sign;
+	int	ncpy;
+	int	w;
+	int	sign;
 
 	ncpy = n;
 	w = 1;
