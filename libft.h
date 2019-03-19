@@ -41,7 +41,7 @@ int			ft_isspace(int c);
 int			ft_strequ(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 int			ft_strcmp(char *s1, char *s2);
-int			ft_strncmp(char *s1, char *s2, unsigned int n);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, int n);
 int			ft_whitespace(int i);
 
@@ -59,7 +59,7 @@ char			*ft_strdup(const char *src);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strcpy(char *dst, char *src);
-char			*ft_strstr(char *str, char *to_find);
+char			*ft_strstr(const char *big, const char *little);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnew(size_t size);
 char			*ft_strncat(char *restrict s1, const char *restrict s2,
