@@ -6,7 +6,7 @@
 /*   By: joshguti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 11:16:33 by joshguti          #+#    #+#             */
-/*   Updated: 2019/03/12 14:29:05 by joshguti         ###   ########.fr       */
+/*   Updated: 2019/03/20 00:27:19 by joshguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 char	*ft_itoa(int n)
 {
 	char	*out;
-	int	ncpy;
-	int	w;
-	int	sign;
+	int		ncpy;
+	int		w;
+	int		sign;
 
 	ncpy = n;
 	w = 1;
