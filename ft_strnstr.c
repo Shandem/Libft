@@ -12,29 +12,29 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		lcpy;
-	char	*h;
-	char	*n;
+	int		counter;
+	size_t	x;
+	size_t	y;
 
-	if (*haystack == *needle && *haystack == '\0')
-		return ((char*)haystack);
-	while (*haystack && len > 0)
+	x = 0;
+	counter = 0;
+	if (little[0] == '\0')
+		return ((char*)big);
+	while (big[counter] != '\0' && len > 0)
 	{
-		lcpy = len;
-		h = (char*)haystack;
-		n = (char*)needle;
-		while (*n && *haystack && *n == *haystack && lcpy > 0)
+		y = counter;
+		while (big[y] == little[x] && x < len && big[y] != '\0')
 		{
-			n++;
-			haystack++;
-			lcpy--;
+			x++;
+			y++;
+			if (little[x] == '\0')
+				return ((char*)(big + counter));
 		}
-		if (!*n)
-			return (h);
-		haystack = h + 1;
 		len--;
+		counter++;
+		x = 0;
 	}
-	return (NULL);
+	return ((void *)0);
 }

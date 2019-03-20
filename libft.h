@@ -67,8 +67,7 @@ char			*ft_strncat(char *restrict s1, const char *restrict s2,
 char			*ft_strmap(char const *s, char (*f)(char));
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char			*ft_strnstr(const char *haystack, const char *needle,
-					size_t len);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_itoa(int n);
 char			**ft_words(char const *s, char c);
